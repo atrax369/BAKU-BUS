@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baku Bus Tracker</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <div>
+        <h1 class="brand">🚌 Baku Bus Tracker</h1>
+        <p class="brand__sub">Şəhər daxilində marşrutunu kəşf et</p>
+      </div>
+      <span class="badge"><span class="badge__dot">●</span> Prototype</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Gedəcəyin yerə daha rahat çat.</h2>
+      <p>Başlanğıc və təyinat nöqtəsini seç, uyğun avtobus marşrutlarını xəritədə araşdır.</p>
+    </section>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <section class="card search">
+          <div class="field">
+            <label for="fromSelect">Haradan</label>
+            <select id="fromSelect"></select>
+          </div>
+          <button id="swapBtn" class="swap" type="button" aria-label="Məkanları dəyiş" title="Məkanları dəyiş">⇅</button>
+          <div class="field">
+            <label for="toSelect">Hara</label>
+            <select id="toSelect"></select>
+          </div>
+          <button id="searchBtn" class="btn" type="button">Marşrutları göstər →</button>
+          <p id="message" class="message" role="alert" hidden></p>
+        </section>
+        <section id="results" class="results" aria-live="polite"></section>
+      </aside>
+
+      <section class="map-wrap card">
+        <div id="map"></div>
+        <div class="map-note">MOCK DATA / PROTOTYPE — real GPS deyil</div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <strong>Baku Bus Tracker</strong>
+      <span>Prototype • Mock Data • Bakı</span>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
